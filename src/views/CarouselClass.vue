@@ -226,14 +226,14 @@ ul {
 .carousel {
   margin-top: 20px;
   width: 100%;
-  height: 10%;
+  height: 35%;
   position: relative;
   border-radius: 16px;
   overflow: hidden;
 }
 .carousel .container1 {
   width: 100%;
-  height: 100%;
+  height: 500px;
   position: relative;
   left: 0;
   display: flex;

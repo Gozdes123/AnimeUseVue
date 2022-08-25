@@ -2,14 +2,14 @@
   <nav class="container navbar">
     <ul class="float-nav clearfix">
       <li>
-        <a href="index.html">{{ nav.Anime }}</a>
+        <router-link to="/">{{ nav.Anime }}</router-link>
       </li>
       <li><a href="#" class="rename" onclick="Login()"></a></li>
       <li>
         <a href="#" onclick="Favorite()">{{ nav.MyFavorite }}</a>
       </li>
       <li>
-        <a href="recommend.html">{{ nav.Recommend }}</a>
+        <router-link to="/recommend">{{ nav.Recommend }}</router-link>
       </li>
     </ul>
   </nav>
@@ -43,7 +43,7 @@ export default {
   --primaryColor: #ff6a48;
 }
 body {
-  height: 2000px;
+  /* height: 2000px; */
   background-color: #e3f2fd98;
 }
 * {
@@ -167,10 +167,10 @@ ul {
 }
 nav {
   width: 100vw;
-  padding-top: 20px;
+  padding-top: 0px;
 }
 nav ul {
-  list-style: none; /* 移除項目符號 */
+  list-style: none; /*移除項目符號*/
   margin: 0;
   padding: 0;
 }

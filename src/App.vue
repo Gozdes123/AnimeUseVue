@@ -1,24 +1,22 @@
 <template>
   <div id="app">
     <NavBarClass />
-    <CarouselClass />
-    <ScheduleClass />
+    <router-view name="Carousel" />
+    <router-view name="Schedule" />
+    <router-view></router-view>
     <FooterClass />
   </div>
 </template>
 
 <script>
 import FooterClass from "./components/FooterClass.vue";
+// import CarouselClass from "./components/CarouselClass.vue";
 import NavBarClass from "./components/NavBarClass.vue";
-import CarouselClass from "./components/CarouselClass.vue";
-import ScheduleClass from "./components/ScheduleClass.vue";
 export default {
   name: "App",
   components: {
-    FooterClass,
     NavBarClass,
-    CarouselClass,
-    ScheduleClass,
+    FooterClass,
   },
   data() {
     return {
