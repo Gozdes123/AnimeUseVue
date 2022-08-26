@@ -3,11 +3,11 @@
     <NavBarClass />
     <router-view name="Carousel" />
     <router-view name="Schedule" />
+    <router-view name="ImgBrowse" />
     <router-view></router-view>
     <FooterClass />
   </div>
 </template>
-
 <script>
 import FooterClass from "./components/FooterClass.vue";
 // import CarouselClass from "./components/CarouselClass.vue";
@@ -20,7 +20,7 @@ export default {
   },
   data() {
     return {
-      messaage: "今天天氣很好",
+      title: "間諜家家酒",
       menu: [
         {
           id: 0,

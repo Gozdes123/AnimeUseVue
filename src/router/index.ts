@@ -3,6 +3,8 @@ import VueRouter from "vue-router";
 import CarouselClass from "../views/CarouselClass.vue";
 import ScheduleClass from "../views/ScheduleClass.vue";
 import RecommendClass from "../views/RecommendClass.vue";
+import MyFavoriteClass from "../views/MyFavoriteClass.vue";
+import ImgBrowseClass from "../views/ImgBrowseClass.vue";
 RecommendClass;
 Vue.use(VueRouter);
 
@@ -12,11 +14,16 @@ const routes = [
     components: {
       Carousel: CarouselClass,
       Schedule: ScheduleClass,
+      ImgBrowse: ImgBrowseClass,
     },
   },
   {
     path: "/recommend",
     component: RecommendClass,
+  },
+  {
+    path: "/myfavorite",
+    component: MyFavoriteClass,
   },
 ];
 

@@ -31,13 +31,17 @@
     </div>
     <!-- 類別按鈕 -->
     <div class="section-center col-12 clearfix">
-      <!-- section-center -->
+      <p :menus="title">{{ menus }}</p>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    menus: String,
+  },
+};
 </script>
 
 <style>

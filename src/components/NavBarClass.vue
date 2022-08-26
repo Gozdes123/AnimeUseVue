@@ -6,7 +6,7 @@
       </li>
       <li><a href="#" class="rename" onclick="Login()"></a></li>
       <li>
-        <a href="#" onclick="Favorite()">{{ nav.MyFavorite }}</a>
+        <router-link to="/myfavorite">{{ nav.MyFavorite }}</router-link>
       </li>
       <li>
         <router-link to="/recommend">{{ nav.Recommend }}</router-link>
