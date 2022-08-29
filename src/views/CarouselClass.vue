@@ -92,7 +92,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 /* global start */
 @import url("https://fonts.googleapis.com/css2?family=Klee+One&display=swap");
 /* font-family: 'Klee One', cursive; */

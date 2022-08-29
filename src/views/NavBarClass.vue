@@ -4,7 +4,9 @@
       <li>
         <router-link to="/">{{ nav.Anime }}</router-link>
       </li>
-      <li><a href="#" class="rename" onclick="Login()"></a></li>
+      <li>
+        <router-link to="/login">{{ nav.Login }}</router-link>
+      </li>
       <li>
         <router-link to="/myfavorite">{{ nav.MyFavorite }}</router-link>
       </li>
@@ -23,6 +25,7 @@ export default {
         Anime: "Anime",
         MyFavorite: "My Favorite",
         Recommend: "Recommend",
+        Login: "Login",
       },
     };
   },

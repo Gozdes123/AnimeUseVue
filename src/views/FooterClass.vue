@@ -8,7 +8,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 footer {
   height: 70px;
   background-color: #cae9ff;

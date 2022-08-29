@@ -24,27 +24,75 @@
       <div class="col-12 img_nav_content_outside">
         <div class="col-12 img_nav_content">
           <ul class="img_nav_content_ul">
-            <div class="btn-container"></div>
+            <div class="btn-container">
+              <li
+                v-for="CountCategoresButtons of CountCategoresButton"
+                :key="CountCategoresButtons"
+              >
+                <input
+                  type="button"
+                  class="filter-btn"
+                  :value="CountCategoresButtons"
+                  name="按鈕名稱"
+                  :data-id="CountCategoresButtons"
+                  style="width: 150px; height: 50px"
+                />
+              </li>
+            </div>
           </ul>
         </div>
       </div>
     </div>
     <!-- 類別按鈕 -->
     <div class="section-center col-12 clearfix">
-      <p :menus="title">{{ menus }}</p>
+      <article class="menu-item col" v-for="menus of menu" :key="menus.id">
+        <div class="img-heart">
+          <img
+            :src="require(`../assets/img/anime/${menus.img}`)"
+            :class="'photo' + menus.id"
+            onclick="Lightbox(${menus.id})"
+          />
+          <i
+            :class="'fa-solid fa-heart btncolor ' + menus.btn"
+            onclick="loveclick(${menus.id})"
+          ></i>
+        </div>
+        <div class="item-info">
+          <header>
+            <h1>{{ menus.title }}</h1>
+          </header>
+        </div>
+      </article>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      CountCategoresButton: [],
+    };
+  },
+  created() {
+    //計算按鈕有那些
+    this.CountCategoresButton = this.menu.reduce(
+      function (values, item) {
+        if (!values.includes(item.category)) {
+          values.push(item.category);
+        }
+        return values;
+      },
+      ["全部"]
+    );
+  },
   props: {
-    menus: String,
+    menu: Array,
   },
 };
 </script>
 
-<style>
+<style scoped>
 /* global start */
 @import url("https://fonts.googleapis.com/css2?family=Klee+One&display=swap");
 /* font-family: 'Klee One', cursive; */
@@ -231,7 +279,7 @@ ul {
   background-color: #32dbfd;
 }
 .img_nav_content_outside {
-  display: none;
+  display: block;
 }
 .img_nav_content {
   padding-bottom: 0;
